@@ -7,7 +7,6 @@ export class CreateUserDto {
     @ApiProperty({
         description: 'Email (unique)',
         nullable: false,
-        minLength: 1
     })
     @IsString()
     @IsEmail()

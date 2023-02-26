@@ -21,7 +21,8 @@ import { join } from 'path';
     UsersModule, 
     ProductsModule, 
     OrdersModule, 
-    CategoriesModule
+    CategoriesModule, 
+
   ],
   controllers: [],
   providers: [],

@@ -42,7 +42,7 @@ export class UsersController {
   @Put(':id')
   @Auth()
   async update( 
-    @Param('id') id: string, 
+    @Param('id', ParseUUIDPipe) id: string, 
     @Body() updateUserDto: UpdateUserDto,
     @GetUser() user: User,
   ) {
