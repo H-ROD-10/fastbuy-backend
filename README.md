@@ -21,6 +21,18 @@ $ npm install
 ```bash
 $ docker-compose up -d
 ```
+```bash
+En la raiz del proyecto se encuentra el archivo fatsbuy.sql 
+una vez se inicie el contenedor de postgres restaure este archvo.
+
+Login
+{
+  email: hector@gmail.com,
+  password: Root03
+}
+
+Role: SUPER_ADMIN
+```
 ## Running the app
 
 ```bash
@@ -69,6 +81,12 @@ ruta: POTS http://Localhost:8000/api/v1/products/create-product
 ```
 En la raiz del proyecto ubique el archivo request-collection que contiene la
 mayoria de las request utilizadas
+```
+
+## Documento Tecnico
+```
+el archivo Documento-Tecnico ubicado en la Raiz del proyecto contiene 
+un desgloce de las tecnologias a emplear para continuar con este desarrollo.
 ```
 ## Support
 
