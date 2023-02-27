@@ -1,3 +1,4 @@
+import { Order } from 'src/orders/entities/order.entity';
 import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 //import { Product } from '../../products/entities';
 
@@ -28,11 +29,8 @@ export class User {
     @JoinColumn({name: 'lastUpdateByUser' })
     lastUpdateByUser?: User;
 
-    //@OneToMany(
-        //() => Product,
-        //( product ) => product.user
-    //)
-    //product: Product;
+    @OneToMany(() => Order, ( order ) => order.user)
+    orders: Order[]
 
 
     @BeforeInsert()

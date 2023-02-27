@@ -5,6 +5,7 @@ import { IsEmail, IsString, Matches, MaxLength, MinLength } from 'class-validato
 export class CreateUserDto {
 
     @ApiProperty({
+        example:"name@emai.com",
         description: 'Email (unique)',
         nullable: false,
     })
@@ -13,6 +14,7 @@ export class CreateUserDto {
     email: string;
 
     @ApiProperty({
+        example:"Root09",
         description: 'Password Min 6 character a Uppercase, Lowercase letter and number',
         nullable: false,
         minLength: 6,

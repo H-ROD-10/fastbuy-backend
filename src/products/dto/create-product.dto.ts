@@ -7,6 +7,7 @@ import { IsArray, IsIn, IsInt, IsNumber, IsOptional,
 export class CreateProductDto {
 
     @ApiProperty({
+        example:"Product",
         description: 'Product title (unique)',
         nullable: false,
         minLength: 1
@@ -15,22 +16,39 @@ export class CreateProductDto {
     @MinLength(1)
     title: string;
 
-    @ApiProperty()
-    //@IsNumber()
-    //@IsPositive()
+    @ApiProperty({
+        example:"99",
+        description: 'Price Float Number',
+        nullable: false,
+    })
+    @IsNumber()
+    @IsPositive()
     @IsString()
     price: string;
 
-    @ApiProperty()
+    @ApiProperty({
+        example:"name@emai.com",
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        nullable: true,
+    })
     @IsString()
     @IsOptional()
     description?: string;
 
-    @ApiProperty()
+    @ApiProperty({
+        example:"http://image.png",
+        description: 'Url Image',
+        nullable: true,
+    })
     @IsString()
     @IsOptional()
     image?: string;
 
+    @ApiProperty({
+        example:"1574ae09-790b-4766-b849-f5f821e375a7",
+        description: 'UUID',
+        nullable: false,
+    })
     @IsUUID()
     categoryId: string;
 

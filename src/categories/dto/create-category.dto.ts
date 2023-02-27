@@ -3,6 +3,7 @@ import { IsNotEmpty, IsString } from "class-validator";
 
 export class CreateCategoryDto {
     @ApiProperty({
+        example:"Belleza",
         description: 'Title (unique)',
         nullable: false,
     })

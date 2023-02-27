@@ -47,6 +47,29 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Documentacion Api
+```bash
+http://localhost:8000/api/
+```
+## Como Crear Un Producto
+```
+1. Registrarse como user, y actualizar el rol a Roles.ADMIN o Roles.SUPER_ADMIN
+2. Verificar si existe la categoria
+3. Crear el Producto
+
+```
+## Como subir imagenes
+```
+Utilizar postman, Body-> form-data agregar los campos requerido para producto, elegir en dropDown del field file
+```
+```bash
+ruta: POTS http://Localhost:8000/api/v1/products/create-product
+```
+## Request
+```
+En la raiz del proyecto ubique el archivo request-collection que contiene la
+mayoria de las request utilizadas
+```
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
